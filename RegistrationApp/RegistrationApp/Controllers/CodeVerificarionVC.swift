@@ -1,22 +1,20 @@
 //
-//  SignInVC.swift
+//  CodeVerificarionVC.swift
 //  RegistrationApp
 //
-//  Created by Alexander Lobonenok on 1.08.22.
+//  Created by Alexander Lobonenok on 7.08.22.
 //
 
 import UIKit
 
-class SignInVC: UIViewController {
+class CodeVerificarionVC: UIViewController {
 
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var errorEmailLbl: UILabel!
-    @IBOutlet weak var errorPasswordLbl: UILabel!
+    var userModel: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
+
+        // Do any additional setup after loading the view.
     }
     
 
