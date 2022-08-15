@@ -28,13 +28,13 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ3-dR-XEL">
-                                <rect key="frame" x="50" y="582" width="314" height="181"/>
+                                <rect key="frame" x="50" y="605" width="314" height="158"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKq-uk-BoD">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Edit user data">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                             <color key="baseForegroundColor" systemColor="systemCyanColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                         </buttonConfiguration>
@@ -48,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFC-pi-geh">
-                                        <rect key="frame" x="0.0" y="143" width="314" height="38"/>
+                                        <rect key="frame" x="0.0" y="120" width="314" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Delete account">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
@@ -65,8 +65,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-vk-csx">
-                                <rect key="frame" x="50" y="194" width="314" height="138"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-vk-csx">
+                                <rect key="frame" x="50" y="194" width="314" height="158"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSu-pJ-rKr">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="36"/>
@@ -75,13 +75,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac4-An-xgG">
-                                        <rect key="frame" x="0.0" y="51" width="314" height="36"/>
+                                        <rect key="frame" x="0.0" y="61" width="314" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZY-r8-QWK">
-                                        <rect key="frame" x="0.0" y="102" width="314" height="36"/>
+                                        <rect key="frame" x="0.0" y="122" width="314" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -101,7 +101,6 @@
                             <constraint firstItem="57K-Gs-8hQ" firstAttribute="bottom" secondItem="ZQ3-dR-XEL" secondAttribute="bottom" constant="50" id="hDh-6v-wSL"/>
                             <constraint firstItem="6zI-vk-csx" firstAttribute="leading" secondItem="57K-Gs-8hQ" secondAttribute="leading" constant="50" id="jWo-wb-Ur3"/>
                             <constraint firstItem="57K-Gs-8hQ" firstAttribute="trailing" secondItem="E41-qU-1WE" secondAttribute="trailing" constant="39" id="ndU-Qe-sqO"/>
-                            <constraint firstItem="ZQ3-dR-XEL" firstAttribute="top" secondItem="6zI-vk-csx" secondAttribute="bottom" constant="250" id="orI-I7-yhe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="ysf-0e-5S5"/>
