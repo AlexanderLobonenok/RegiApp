@@ -24,10 +24,11 @@ final class SignUpVC: UIViewController {
     ///Confirm password
     @IBOutlet private weak var confirmPasswordTF: UITextField!
     @IBOutlet private weak var errorConfirmPasswordLbl: UILabel!
-    ///SignIn button
-
     ///Continue button
     @IBOutlet private weak var continueBtn: UIButton!
+    ///scrollView
+    @IBOutlet private weak var scrollView: UIScrollView!
+    
     
     // MARK: - Properties
     
@@ -41,6 +42,7 @@ final class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        startKeyboardObserver()
     }
     
     // MARK: - Functions
@@ -107,13 +109,36 @@ final class SignUpVC: UIViewController {
         continueBtn.isEnabled = isValidEmail && isConfPass && passwordStrength != .veryWeak
     }
     
+    ///Keyboard observers
+    
+    private func startKeyboardObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillShow(notification: Notification) {
+        guard let keyboardSize =
+            (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else { return }
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
+    @objc private func keyboardWillHide() {
+        let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+    }
+    
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let codeVerificationVC = segue.destination as? CodeVerificarionVC,
+        if let codeVerificationVC = segue.destination as? CodeVerificationVC,
             let userModel = sender as? UserModel {
             codeVerificationVC.userModel = userModel
+            
         }
     }
 }

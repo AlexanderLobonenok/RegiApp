@@ -57,7 +57,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Qh-ET-5B2">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User not found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzf-F4-Qrc">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="0.0"/>
@@ -67,12 +67,13 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzS-nN-mIS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzS-nN-mIS">
                                         <rect key="frame" x="0.0" y="365" width="364" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Sign In">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
-                                            <color key="baseBackgroundColor" systemColor="systemTealColor"/>
+                                            <color key="baseForegroundColor" systemColor="systemCyanColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -80,7 +81,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="HBH-Vr-toI" kind="show" id="1ER-fe-e8V"/>
+                                            <action selector="signInAction" destination="Z1Y-Zs-WUf" eventType="touchUpInside" id="WGe-k8-eVi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -104,6 +105,7 @@
                         <outlet property="errorEmailLbl" destination="ozE-er-Uzj" id="9fP-l3-O2x"/>
                         <outlet property="errorPasswordLbl" destination="Jzf-F4-Qrc" id="aGe-Oh-Mlc"/>
                         <outlet property="passwordTF" destination="2Qh-ET-5B2" id="oFE-dO-O9f"/>
+                        <segue destination="HBH-Vr-toI" kind="show" identifier="goToMain" id="akH-se-Ekv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RB3-eJ-2IR" sceneMemberID="firstResponder"/>
@@ -161,9 +163,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
