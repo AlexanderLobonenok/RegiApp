@@ -108,7 +108,7 @@
                     <connections>
                         <outlet property="emailLbl" destination="pSu-pJ-rKr" id="wkc-vs-wzL"/>
                         <outlet property="nameLbl" destination="ac4-An-xgG" id="AXx-iV-1TZ"/>
-                        <outlet property="passLbl" destination="hZY-r8-QWK" id="QFh-yo-Uzu"/>
+                        <outlet property="passLbl" destination="hZY-r8-QWK" id="GEh-Rp-Rdz"/>
                         <segue destination="TWE-SZ-Du8" kind="show" identifier="goToEditUserDataVC" id="HoN-Ec-sij"/>
                     </connections>
                 </viewController>

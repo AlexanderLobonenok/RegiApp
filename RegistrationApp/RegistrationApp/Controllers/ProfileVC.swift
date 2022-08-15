@@ -23,6 +23,7 @@ final class ProfileVC: UIViewController, EditDelegate {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaultsService.saveUserModel(userModel: UserModel(name: "name", email: "email", pass: "pass"))
         setupUI()
     }
 // MARK:- Outlet
@@ -30,8 +31,8 @@ final class ProfileVC: UIViewController, EditDelegate {
     
     @IBOutlet private weak var nameLbl: UILabel!
     
-    @IBOutlet private weak var passLbl: UILabel!
     
+    @IBOutlet private weak var passLbl: UILabel!
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,12 +60,17 @@ final class ProfileVC: UIViewController, EditDelegate {
 
     
     private func setupUI() {
-        let email = UserDefaults.standard.string(forKey: "email")
-        emailLbl.text = email
-        let name = UserDefaults.standard.string(forKey: "name")
-        nameLbl.text = name
-        let pass = UserDefaults.standard.string(forKey: "password")
-        passLbl.text = pass
+//        let email = UserDefaults.standard.string(forKey: UserDefaults.Keys.email.rawValue)
+//        emailLbl.text = email
+//        let name = UserDefaults.standard.string(forKey: UserDefaults.Keys.name.rawValue)
+//        nameLbl.text = name
+//        let pass = UserDefaults.standard.string(forKey: UserDefaults.Keys.pass.rawValue)
+//        passLbl.text = pass // nil
+        
+        let user = UserDefaultsService.getUserModel()
+        emailLbl.text = user?.email
+        nameLbl.text = user?.name
+        passLbl.text = user?.pass
     }
     
 }
