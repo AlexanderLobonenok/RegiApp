@@ -1,2 +1,2 @@
 # RegistrationApp
-Try to make my first RegistrationApp!
+Try to make my first RegiApp!
