@@ -16,10 +16,29 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isLoggedUser()
         hideKeyboardWhenTappedAround()
     }
     
-
+    @IBAction func signInAction() {
+        
+        if let email = emailTF.text,
+           let pass = passwordTF.text,
+           let userModel = UserDefaultsService.getUserModel(),
+           email == userModel.email,
+           pass == userModel.pass {
+            performSegue(withIdentifier: "goToMain", sender: nil)
+        }
+    }
+    
+    private func isLoggedUser() {
+        if let _ = UserDefaultsService.getUserModel() {
+            performSegue(withIdentifier: "goToMain", sender: nil)
+        }
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 

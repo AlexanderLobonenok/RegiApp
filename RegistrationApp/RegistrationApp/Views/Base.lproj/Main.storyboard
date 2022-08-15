@@ -8,33 +8,143 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="RCB-fW-hCH">
             <objects>
-                <viewController id="Bcx-yP-FNR" sceneMemberID="viewController">
+                <viewController id="Bcx-yP-FNR" customClass="ProfileVC" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="39q-Io-mcp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E41-qU-1WE">
+                                <rect key="frame" x="281" y="94" width="94" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutAction:" destination="Bcx-yP-FNR" eventType="touchUpInside" id="VSr-uJ-fcZ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ3-dR-XEL">
+                                <rect key="frame" x="50" y="582" width="314" height="181"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKq-uk-BoD">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Edit user data">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            <color key="baseForegroundColor" systemColor="systemCyanColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="editUserDataBtnAction" destination="Bcx-yP-FNR" eventType="touchUpInside" id="Wqs-o1-QG7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFC-pi-geh">
+                                        <rect key="frame" x="0.0" y="143" width="314" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Delete account">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deleteAccountAction" destination="Bcx-yP-FNR" eventType="touchUpInside" id="KK4-Cv-OR0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6zI-vk-csx">
+                                <rect key="frame" x="50" y="194" width="314" height="138"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSu-pJ-rKr">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac4-An-xgG">
+                                        <rect key="frame" x="0.0" y="51" width="314" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZY-r8-QWK">
+                                        <rect key="frame" x="0.0" y="102" width="314" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="57K-Gs-8hQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6zI-vk-csx" firstAttribute="centerX" secondItem="57K-Gs-8hQ" secondAttribute="centerX" id="P6n-Sp-fKE"/>
+                            <constraint firstItem="6zI-vk-csx" firstAttribute="top" secondItem="57K-Gs-8hQ" secondAttribute="top" constant="150" id="RqO-T1-Vbk"/>
+                            <constraint firstItem="57K-Gs-8hQ" firstAttribute="trailing" secondItem="6zI-vk-csx" secondAttribute="trailing" constant="50" id="SFU-po-YVK"/>
+                            <constraint firstItem="E41-qU-1WE" firstAttribute="top" secondItem="57K-Gs-8hQ" secondAttribute="top" constant="50" id="SMB-of-4B8"/>
+                            <constraint firstItem="ZQ3-dR-XEL" firstAttribute="leading" secondItem="57K-Gs-8hQ" secondAttribute="leading" constant="50" id="aCO-9v-eg7"/>
+                            <constraint firstItem="57K-Gs-8hQ" firstAttribute="trailing" secondItem="ZQ3-dR-XEL" secondAttribute="trailing" constant="50" id="fuh-4y-hnZ"/>
+                            <constraint firstItem="57K-Gs-8hQ" firstAttribute="bottom" secondItem="ZQ3-dR-XEL" secondAttribute="bottom" constant="50" id="hDh-6v-wSL"/>
+                            <constraint firstItem="6zI-vk-csx" firstAttribute="leading" secondItem="57K-Gs-8hQ" secondAttribute="leading" constant="50" id="jWo-wb-Ur3"/>
+                            <constraint firstItem="57K-Gs-8hQ" firstAttribute="trailing" secondItem="E41-qU-1WE" secondAttribute="trailing" constant="39" id="ndU-Qe-sqO"/>
+                            <constraint firstItem="ZQ3-dR-XEL" firstAttribute="top" secondItem="6zI-vk-csx" secondAttribute="bottom" constant="250" id="orI-I7-yhe"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ysf-0e-5S5"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="ysf-0e-5S5"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="pSu-pJ-rKr" id="wkc-vs-wzL"/>
+                        <outlet property="nameLbl" destination="ac4-An-xgG" id="AXx-iV-1TZ"/>
+                        <outlet property="passLbl" destination="hZY-r8-QWK" id="QFh-yo-Uzu"/>
+                        <segue destination="TWE-SZ-Du8" kind="show" identifier="goToEditUserDataVC" id="HoN-Ec-sij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEm-JR-8KI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="903" y="431"/>
         </scene>
-        <!--Item 1-->
+        <!--New features-->
         <scene sceneID="vLa-2u-z5y">
             <objects>
                 <viewController id="gwd-OC-6DO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V6q-he-RmX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dMU-CT-AyI">
+                                <rect key="frame" x="25" y="394" width="364" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New features in progress! Stay together with us." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB0-RZ-ZpP">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wfp-gu-rWJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dMU-CT-AyI" firstAttribute="top" secondItem="wfp-gu-rWJ" secondAttribute="top" constant="350" id="Ga5-VO-gfZ"/>
+                            <constraint firstItem="wfp-gu-rWJ" firstAttribute="trailing" secondItem="dMU-CT-AyI" secondAttribute="trailing" constant="25" id="PiT-iX-IPS"/>
+                            <constraint firstItem="dMU-CT-AyI" firstAttribute="leading" secondItem="wfp-gu-rWJ" secondAttribute="leading" constant="25" id="XWp-eQ-NZS"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="N9z-ec-ww3"/>
+                    <tabBarItem key="tabBarItem" title="New features" image="circle.hexagongrid.circle.fill" catalog="system" id="N9z-ec-ww3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSQ-0O-3sJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,10 +168,88 @@
             </objects>
             <point key="canvasLocation" x="15" y="127"/>
         </scene>
+        <!--Edit User DataVC-->
+        <scene sceneID="TXe-0O-yD3">
+            <objects>
+                <viewController storyboardIdentifier="editingVC" id="TWE-SZ-Du8" customClass="EditUserDataVC" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4EZ-EI-ASw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="t8c-IS-8YC">
+                                <rect key="frame" x="45" y="260" width="324" height="302"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bej-Sl-xJS">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-8r-0V3">
+                                        <rect key="frame" x="0.0" y="134" width="324" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZcS-59-WGe">
+                                        <rect key="frame" x="0.0" y="268" width="324" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4j-kU-qZb">
+                                <rect key="frame" x="50" y="714" width="314" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Save">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="systemCyanColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goEdit" destination="TWE-SZ-Du8" eventType="touchUpInside" id="YU5-QD-ihk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JEo-xq-InA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JEo-xq-InA" firstAttribute="trailing" secondItem="Bej-Sl-xJS" secondAttribute="trailing" constant="45" id="HZZ-h1-sPb"/>
+                            <constraint firstItem="JEo-xq-InA" firstAttribute="trailing" secondItem="J4j-kU-qZb" secondAttribute="trailing" constant="50" id="IxR-0b-UoN"/>
+                            <constraint firstItem="Bej-Sl-xJS" firstAttribute="leading" secondItem="JEo-xq-InA" secondAttribute="leading" constant="45" id="JoW-Ky-mek"/>
+                            <constraint firstItem="JEo-xq-InA" firstAttribute="bottom" secondItem="J4j-kU-qZb" secondAttribute="bottom" constant="90" id="OOF-r2-zhA"/>
+                            <constraint firstItem="t8c-IS-8YC" firstAttribute="leading" secondItem="4EZ-EI-ASw" secondAttribute="leadingMargin" constant="25" id="Vvz-UU-6ch"/>
+                            <constraint firstItem="Bej-Sl-xJS" firstAttribute="top" secondItem="JEo-xq-InA" secondAttribute="top" constant="216" id="e1N-qg-0eV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t8c-IS-8YC" secondAttribute="trailing" constant="25" id="hc7-6g-s45"/>
+                            <constraint firstItem="J4j-kU-qZb" firstAttribute="leading" secondItem="JEo-xq-InA" secondAttribute="leading" constant="50" id="meT-Sf-4mr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7DP-rF-3MG"/>
+                    <connections>
+                        <outlet property="editedEmailTF" destination="Bej-Sl-xJS" id="iLA-ia-73s"/>
+                        <outlet property="editedPasswordTF" destination="ZcS-59-WGe" id="Dqq-Hc-aEL"/>
+                        <outlet property="editedUserNameTF" destination="0Kg-8r-0V3" id="g4Q-Nj-hvW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVN-oj-3Gg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734.7826086956522" y="430.58035714285711"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="circle.hexagongrid.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
